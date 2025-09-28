@@ -4,7 +4,7 @@ import { Context } from "..//context/context"
 
 function Main() {
 
-    const {onSent, recentPrompt, showResult, loading, ResultData, setInput, input } = useContext(Context)
+    const {onSent, recentPrompt, setRecentPrompt , showResult, loading, ResultData, setInput, input } = useContext(Context)
 
     return (
     
@@ -13,7 +13,7 @@ function Main() {
         
         <div className="flex justify-between">
             <p className="text-2xl p-3">Gemini</p>
-            <img  className='rounded-full w-12 h-12 m-3 cursor-pointer' src={assets.user_icon} alt="Profile Picture" />
+            <img  className='rounded-full w-12 h-12 mx-3 mt-1 cursor-pointer' src={assets.user_icon} alt="Profile Picture" />
         </div>
 
         {
@@ -29,22 +29,26 @@ function Main() {
 
             <div className="sm:flex grid grid-cols-2 mx-4 gap-2">
 
-                <div className="bg-gray-200 p-3 rounded-xl flex flex-col justify-between  text-gray-700 cursor-pointer  h-40 w-50 transition-all hover:bg-gray-300" >
+                <div onClick={() => {
+                     onSent("Suggest Beautiful places to see on an upcoming road trip")} } className="bg-gray-200 p-3 rounded-xl flex flex-col justify-between  text-gray-700 cursor-pointer  h-40 w-50 transition-all hover:bg-gray-300" >
                     <p>Suggest Beautiful places to see on an upcoming road trip</p>
                     <img className='h-10 w-10 p-1.5  bg-gray-50 rounded-full self-end' src={assets.compass_icon} alt="" />
                 </div>
 
-                <div className="bg-gray-200 p-3 rounded-xl flex flex-col justify-between  text-gray-700 cursor-pointer  h-40 w-50  transition-all hover:bg-gray-300" >
+                <div onClick={() => {
+                     onSent("Briefly summurize this concept: urban planning")} } className="bg-gray-200 p-3 rounded-xl flex flex-col justify-between  text-gray-700 cursor-pointer  h-40 w-50  transition-all hover:bg-gray-300" >
                     <p>Briefly summurize this concept: urban planning</p>
                     <img className='h-10 w-10 p-1.5  bg-gray-50 rounded-full self-end' src={assets.bulb_icon} alt="" />
                 </div>
 
-                <div className="bg-gray-200 p-3 rounded-xl flex flex-col justify-between  text-gray-700 cursor-pointer  h-40 w-50  transition-all hover:bg-gray-300" >
+                <div onClick={() => {
+                     onSent("Brainstorm team bonding activities for our work retreat")} } className="bg-gray-200 p-3 rounded-xl flex flex-col justify-between  text-gray-700 cursor-pointer  h-40 w-50  transition-all hover:bg-gray-300" >
                     <p>Brainstorm team bonding activities for our work retreat</p> 
                     <img  className='h-10 w-10 p-1.5  bg-gray-50 rounded-full self-end' src={assets.message_icon} alt="" />  
                 </div>
 
-                <div className="bg-gray-200 p-3 rounded-xl flex flex-col justify-between  text-gray-700 cursor-pointer  h-40 w-50 transition-all hover:bg-gray-300" >
+                <div onClick={() => {
+                     onSent("Improve the readability of the following code")} } className="bg-gray-200 p-3 rounded-xl flex flex-col justify-between  text-gray-700 cursor-pointer  h-40 w-50 transition-all hover:bg-gray-300" >
                     <p>Improve the readability of the following code</p>
                     <img className='h-10 w-10 p-1.5  bg-gray-50 rounded-full self-end' src={assets.code_icon} alt="" />
                 </div>
@@ -93,7 +97,7 @@ function Main() {
         </div>
 
         <div>
-            <p className="text-sm text-center sm:-mt-9 sm:mb-3 -mt-8 py-1 mx-1 ">Gemini may display inaccurate info, including about people, so double-check its responses. Your privacy and Gemini Apps</p>
+            <p className="text-sm text-center sm:-mt-9 sm:mb-1 -mt-8 py-1 mx-1 ">Gemini may display inaccurate info, including about people, so double-check its responses. Your privacy and Gemini Apps</p>
         </div>
     </div>
 

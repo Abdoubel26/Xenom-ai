@@ -13,13 +13,16 @@ const ContextProvider = (props) => {
     const [showResult, setShowResult] = useState(false)
     const [ResultData, setResultData] = useState('')
 
-    const onSent = async () => {
-        setRecentPrompt(input)
-        setPrevPrompts(prev=>[...prev,input])
+    const onSent = async (prompt) => {
+        setRecentPrompt(prompt ? prompt : input )
+        if(!prevPrompts.includes(prompt)){
+            setPrevPrompts(prev=>[...prev, prompt ? prompt : input])
+        }
+        
         setLoading(true)
         setResultData('');
         setShowResult(true)
-        const response = await runChat(input)
+        const response = await runChat( prompt ? prompt : input)
         let formatted = marked(response);   
         let newResponseArray = formatted.split(" ");
         for(let i = 0; i < newResponseArray.length; i++){
@@ -36,11 +39,17 @@ const ContextProvider = (props) => {
         }, 75*index)
     }
 
+    
     const contextValue = {
         prevPrompts,
         setPrevPrompts,
         onSent,
         setRecentPrompt,
+        setLoading,
+        setShowResult,
+        setResultData,
+        setInput,
+        setResultData,
         recentPrompt,
         loading,
         ResultData,
