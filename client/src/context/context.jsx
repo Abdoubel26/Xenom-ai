@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import runChat from "../config/groq";
+import runChat from "../config/gemini";
 import { marked } from 'marked'
 
 const instructions =  `
