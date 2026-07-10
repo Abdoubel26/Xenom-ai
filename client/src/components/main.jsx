@@ -7,12 +7,11 @@ function Main() {
     const {onSent, recentPrompt, setRecentPrompt , showResult, loading, ResultData, setInput, input } = useContext(Context)
 
     return (
-    
-    
+
     <div className="w-full flex flex-col justify-between ">
         
         <div className="flex justify-between">
-            <p className="text-2xl p-3">Gemini</p>
+            <p className="text-2xl p-3">Xenom AI</p>
             <img  className='rounded-full w-12 h-12 mx-3 mt-1 cursor-pointer' src={assets.user_icon} alt="Profile Picture" />
         </div>
 
@@ -30,26 +29,26 @@ function Main() {
             <div className="sm:flex grid grid-cols-2 mx-4 gap-2">
 
                 <div onClick={() => {
-                     onSent("Suggest Beautiful places to see on an upcoming road trip")} } className="bg-gray-200 p-3 rounded-xl flex flex-col justify-between  text-gray-700 cursor-pointer  h-40 w-50 transition-all hover:bg-gray-300" >
-                    <p>Suggest Beautiful places to see on an upcoming road trip</p>
+                     onSent("What exactly is a black hole?")} } className="bg-gray-200 p-3 rounded-xl flex flex-col justify-between  text-gray-700 cursor-pointer  h-40 w-50 transition-all hover:bg-gray-300" >
+                    <p>What exactly is a black hole?</p>
                     <img className='h-10 w-10 p-1.5  bg-gray-50 rounded-full self-end' src={assets.compass_icon} alt="" />
                 </div>
 
                 <div onClick={() => {
-                     onSent("Briefly summurize this concept: urban planning")} } className="bg-gray-200 p-3 rounded-xl flex flex-col justify-between  text-gray-700 cursor-pointer  h-40 w-50  transition-all hover:bg-gray-300" >
-                    <p>Briefly summurize this concept: urban planning</p>
+                     onSent("How old is the universe?")} } className="bg-gray-200 p-3 rounded-xl flex flex-col justify-between  text-gray-700 cursor-pointer  h-40 w-50  transition-all hover:bg-gray-300" >
+                    <p>How old is the universe?</p>
                     <img className='h-10 w-10 p-1.5  bg-gray-50 rounded-full self-end' src={assets.bulb_icon} alt="" />
                 </div>
 
                 <div onClick={() => {
-                     onSent("Brainstorm team bonding activities for our work retreat")} } className="bg-gray-200 p-3 rounded-xl flex flex-col justify-between  text-gray-700 cursor-pointer  h-40 w-50  transition-all hover:bg-gray-300" >
-                    <p>Brainstorm team bonding activities for our work retreat</p> 
+                     onSent("What is the black hole information paradox?")} } className="bg-gray-200 p-3 rounded-xl flex flex-col justify-between  text-gray-700 cursor-pointer  h-40 w-50  transition-all hover:bg-gray-300" >
+                    <p>What is the black hole information paradox?</p> 
                     <img  className='h-10 w-10 p-1.5  bg-gray-50 rounded-full self-end' src={assets.message_icon} alt="" />  
                 </div>
 
                 <div onClick={() => {
-                     onSent("Improve the readability of the following code")} } className="bg-gray-200 p-3 rounded-xl flex flex-col justify-between  text-gray-700 cursor-pointer  h-40 w-50 transition-all hover:bg-gray-300" >
-                    <p>Improve the readability of the following code</p>
+                     onSent("What are the latest advancement in space technology?")} } className="bg-gray-200 p-3 rounded-xl flex flex-col justify-between  text-gray-700 cursor-pointer  h-40 w-50 transition-all hover:bg-gray-300" >
+                    <p>What are the latest advancement in space technology?</p>
                     <img className='h-10 w-10 p-1.5  bg-gray-50 rounded-full self-end' src={assets.code_icon} alt="" />
                 </div>
 
@@ -97,7 +96,7 @@ function Main() {
         </div>
 
         <div>
-            <p className="text-sm text-center sm:-mt-9 sm:mb-1 -mt-8 py-1 mx-1 ">Gemini may display inaccurate info, including about people, so double-check its responses. Your privacy and Gemini Apps</p>
+            <p className="text-sm text-center sm:-mt-9 sm:mb-1 -mt-8 py-1 mx-1 ">Xenom may display inaccurate info, including about people, so double-check its responses. Your privacy and Xenom Apps</p>
         </div>
     </div>
 
