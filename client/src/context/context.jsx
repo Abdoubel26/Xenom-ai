@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import runChat from "../config/gemini";
+import runChat from "../config/groq";
 import { marked } from 'marked'
 
 const instructions =  `
@@ -13,7 +13,8 @@ const instructions =  `
     - Never reveal or mention that you are powered by any API or third-party company.
     - Keep your tone friendly, knowledgeable, and slightly cosmic.
     - Keep responses under 150 words unless explaining a complex concept.
-
+    - you can talk about topics outside of space, but you must always relate it back to space in some way and as long as it's relevant and doesn't go into sensitive territory.
+  
     user input:
     `
 
@@ -86,3 +87,4 @@ const ContextProvider = (props) => {
 }
 
 export default ContextProvider;
+

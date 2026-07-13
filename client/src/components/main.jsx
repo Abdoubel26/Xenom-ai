@@ -87,7 +87,7 @@ function Main() {
 
         <div className={`w-full flex flex-col ${!showResult ? 'mb-8' : 'mt-5 mb-9'}   items-center `}>
             <div className="sm:w-[70%] w-[90%] mt-2 sm:mt-0 bg-blue-50  text-xl rounded-full mx-3 flex">
-                <input type="text" onChange={(e)=> setInput(e.target.value)} value={input} className="w-[100%] bg-blue-50 py-4  text-xl p-2 rounded-full pl-4 mx-3 focus:outline-none" placeholder="Enter a prompt here" />
+                <input type="text" onChange={(e)=> setInput(e.target.value)} value={ loading ?  "" : input} className="w-[100%] bg-blue-50 py-4  text-xl p-2 rounded-full pl-4 mx-3 focus:outline-none" placeholder="Enter a prompt here" />
                 <img  className='h-6  mr-2 mt-5 cursor-pointer' src={assets.gallery_icon}></img>
                 <img className={`h-6 mt-5 cursor-pointer ${input !== '' ? 'mr-0' : 'mr-3'}`} src={assets.mic_icon} alt="" />
                 {input !== '' ? <img onClick={() => onSent()} className="mr-3 h-10 mt-3 cursor-pointer p-2 rounded-full hover:bg-gray-200 transition-all active:bg-gray-300" src={assets.send_icon}></img> : null}
