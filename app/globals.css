@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+
+
+*{
+   box-sizing: border-box;
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
+
+.outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;   
+}
+
+.loader-animation {
+  animation: loader 3s infinite;
+}
+
+@keyframes loader {
+  0% {
+    background-position: -800px 0px;
+  }
+  100%{
+    background-position: 800px 0px;
+  }
+  
+}
+
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 114, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 114, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 114, 255, 0.4);
+  }
+}
+/* Headings */
+.expectional h1, h2, h3 {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  margin: 1.2em 0 0.6em;
+  color: #1a1a1a;
+}
+
+.expectional h1 {
+  font-size: 2rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.3em;
+}
+
+.expectional h2 {
+  font-size: 1.75rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.2em;
+}
+
+.expectional h3 {
+  font-size: 1.5rem;
+  color: #0072ff;
+}
+
+/* Paragraphs */
+.expectional p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0.8em 0;
+  color: #333;
+}
+
+/* Bold & Italic */
+.expectional b {
+  font-weight: bold;
+  color: #222;
+}
+
+.expectional i {
+  font-style: italic;
+  color: #555;
+}
+
+/* Code */
+.expectional code {
+  background-color: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  color: #d63384;
+}
+
+/* Horizontal Rule */
+.expectional hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border-radius: 999px;
+  margin: 2em auto;
+  width: 80%;
+  box-shadow: 0 0 10px rgba(0, 114, 255, 0.3);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Lists */
+.expectional ul, ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.expectional li {
+  margin-bottom: 0.5em;
+  font-size: 1rem;
+}
+
+/* Blockquotes */
+.expectional blockquote {
+  border-left: 4px solid #0072ff;
+  padding-left: 1em;
+  color: #555;
+  font-style: italic;
+  background-color: #f9f9f9;
+  margin: 1em 0;
+}
+
+/* Links */
+.expectional a {
+  color: #0072ff;
+  text-decoration: none;
+}
+
+.expectional a:hover {
+  text-decoration: underline;
+}
+
