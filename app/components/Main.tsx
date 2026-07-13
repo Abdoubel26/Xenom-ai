@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { Context } from "../context/context";
 import { CircleDot, User, Image, Mic, SendHorizontal } from "lucide-react";
 
-function Main() {
+function Main() { 
   const context = useContext(Context);
   if (!context) return null;
 
