@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Xenom AI
 
-## Getting Started
+A modern, developer-friendly AI web app built with Next.js and TypeScript.
 
-First, run the development server:
+This repository provides a foundation for building an AI-powered chat/assistant interface and related features. It uses TypeScript for the application logic, CSS for styling, and a small amount of JavaScript utilities.
+
+Demo: https://google-gemini-clone-seven-beta.vercel.app
+
+Highlights
+
+- Next.js + TypeScript application
+- Clean, component-driven structure optimized for DX
+- Easily extensible AI integration points (API keys, request/response handling)
+
+Table of contents
+
+- [Getting started](#getting-started)
+- [Development](#development)
+- [Configuration](#configuration)
+- [Project structure](#project-structure)
+- [Scripts](#scripts)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+Getting started
+
+Prerequisites
+
+- Node.js 18 or later
+- npm, yarn, or pnpm
+
+Clone and install
+
+```bash
+git clone https://github.com/Abdoubel26/Xenom-ai.git
+cd Xenom-ai
+npm install
+# or: pnpm install
+# or: yarn install
+```
+
+Run the development server
 
 ```bash
 npm run dev
 # or
-yarn dev
-# or
 pnpm dev
 # or
-bun dev
+yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 to view the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Build for production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+Configuration
 
-To learn more about Next.js, take a look at the following resources:
+Create a `.env` file in the project root to store secrets and runtime configuration. Example:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+# .env (example)
+NODE_ENV=development
+PORT=3000
+AI_API_KEY=your_api_key_here
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Never commit secrets to git. Add `.env` to `.gitignore`.
 
-## Deploy on Vercel
+Project structure (overview)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- app/ or pages/ — Next.js application routes and pages
+- src/ — TypeScript source (components, hooks, services)
+- public/ — static assets
+- styles/ — global and component styles (CSS)
+- scripts/ — helper scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Adjust these to match the repository layout as you extend the project.
+
+Development notes
+
+- Follow existing TypeScript and linting rules.
+- Keep components small and focused; prefer composable hooks and services for business logic.
+- Add tests for new features where applicable.
+
+Common scripts
+
+- `npm run dev` — start the development server
+- `npm run build` — production build
+- `npm run start` — start the production server
+- `npm run lint` — run linters (if configured)
+- `npm run test` — run tests (if configured)
+
+Contributing
+
+Contributions are welcome. Suggested workflow:
+
+1. Fork the repository
+2. Create a branch: `git checkout -b feat/your-feature`
+3. Commit your changes with clear messages
+4. Open a pull request describing the change
+
+Add tests and update documentation where appropriate.
+
+License
+
+This repository does not include a license file. If you want to open-source the project, consider adding a license such as MIT and adding a `LICENSE` file.
+
+Contact
+
+If you have questions or issues, open an issue on GitHub or contact the maintainer: @Abdoubel26
